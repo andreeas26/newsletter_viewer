@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Emails:</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1><div href="{{ url_for('unread_emails', id=id) }}">Email ID: {{ id }}</div></h1>
+    <div href="{{ email }}">
+        <h2>From: {{ email.sender }}</h2>
+        <h2>Subject: {{ email.subject }}</h2>
+        <h2>Date: {{ email.date }}</h2>
+        <p>Body: {{ email.message }}</p>
+    </div>
+</body>
+</html>
